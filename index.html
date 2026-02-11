@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Djabala - Ambassades du Mali</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="img/logo.PNG" alt="Djabala - Logo">
+    </div>
+    <h1>Djabala - Ambassades et Consulats du Mali</h1>
+    <p>Recherchez et trouvez facilement les ambassades et consulats maliens à travers le monde.</p>
+</header>
+
+<!-- Section Accueil améliorée -->
+<nav class="navigation">
+    <a href="index.html" class="accueil-link">🏠 Accueil</a>
+    <a href="services.html">🛠️ Services</a>
+    <a href="apropos.html">ℹ️ À propos</a>
+    <a href="contact.html">📨 Contact</a>
+
+</nav>
+
+<!-- Étape 1 : Sélection Ambassade ou Consulat -->
+<main id="etape1" class="container">
+    <h2>Que recherchez-vous ?</h2>
+    <div class="choix">
+        <div class="option" onclick="choisirType('ambassade')">
+            <img src="img/ambassade.jpg" alt="Ambassade">
+            <p>Ambassade</p>
+        </div>
+        <div class="option" onclick="choisirType('consulat')">
+            <img src="img/consulat.jpg" alt="Consulat">
+            <p>Consulat</p>
+        </div>
+    </div>
+</main>
+
+<!-- Étape 2 : Sélection du lieu -->
+<main id="etape2" class="container hidden">
+    <h2>Où vivez-vous ?</h2>
+    <div class="buttons">
+        <button onclick="choisirLieu('mali')">Je vis au Mali</button>
+        <button onclick="choisirLieu('exterieur')">Je vis à l’extérieur</button>
+    </div>
+
+    <!-- Barre de recherche -->
+    <input type="text" id="searchBar" placeholder="Rechercher..." onkeyup="filtrer()">
+
+    <!-- Sections dynamiques -->
+    <div id="ambassades-container" class="hidden"></div>
+    <div id="consulats-container" class="hidden"></div>
+</main>
+
+<!-- Flèche de retour en haut -->
+<!-- Flèche de retour en haut -->
+<a href="#" class="scrollTop" id="scrollTop" title="Retour en haut">⬆️</a>
+
+
+<footer>
+    <p>&copy; 2025 Djabala - Tous droits réservés | <a        <a href="contact.html">Contact</a> |
+        <a href="mentions.html">Mentions légales</a> |
+        <a href="apropos.html">À propos</a>
+</footer>
+
+<script src="ambassades.js"></script>
+<script src="data.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
